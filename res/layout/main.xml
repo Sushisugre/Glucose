@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- s4 -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView_global"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout_device"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout_strips"
+            android:layout_width="fill_parent"
+            android:layout_height="110dp"
+            android:scaleType="fitStart" >
+
+            <cn.edu.tongji.sse.glucosemeter.ui.StripView
+                android:id="@+id/stripView1"
+                android:layout_width="61dp"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="60dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/strip" />
+
+            <cn.edu.tongji.sse.glucosemeter.ui.StripView
+                android:id="@+id/stripView2"
+                android:layout_width="61dp"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingBottom="60dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/strip" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="18" >
+
+                <ImageView
+                    android:id="@+id/blood"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="35dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="bottom"
+                    android:visibility="invisible"
+                    android:src="@drawable/blood" />
+
+                <ImageView
+                    android:id="@+id/needleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="100dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/needle" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="140dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/needleButton"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:background="#00000000" />
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView_device"
+            android:layout_width="fill_parent"
+            android:layout_height="543dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingTop="110dp"
+            android:background="#00000000"
+            android:src="@drawable/device" >
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_button_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingTop="35dp" >
+
+            <cn.edu.tongji.sse.glucosemeter.ui.MeterDisplay
+                android:id="@+id/screenView"
+                android:layout_width="280dp"
+                android:layout_height="220dp" >
+            </cn.edu.tongji.sse.glucosemeter.ui.MeterDisplay>
+
+            <ImageButton
+                android:id="@+id/buttonView"
+                android:layout_width="90dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#00000000"
+                android:focusable="true"
+                android:paddingTop="30dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/button_selector" >
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_usb_ac"
+            android:layout_width="wrap_content"
+            android:layout_height="663dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="543dp" >
+
+            <cn.edu.tongji.sse.glucosemeter.ui.USBView
+                android:id="@+id/usbView"
+                android:layout_width="68dp"
+                android:layout_height="250dp"
+                android:paddingTop="30dp"
+                android:paddingRight="8dp"
+                android:src="@drawable/usb" >
+            </cn.edu.tongji.sse.glucosemeter.ui.USBView>
+
+            <cn.edu.tongji.sse.glucosemeter.ui.ACView
+                android:id="@+id/acView"
+                android:layout_width="53dp"
+                android:layout_height="193dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="5dp"
+                android:paddingTop="30dp"
+                android:src="@drawable/ac" >
+            </cn.edu.tongji.sse.glucosemeter.ui.ACView>
+        </LinearLayout>
+    </FrameLayout>
+
+</ScrollView>
